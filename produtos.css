@@ -1,3 +1,14 @@
 header{
     background: #BBBBBB;
 }
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+nav a{
+    text-transform: uppercase;/*Tranforma todo o texto e maiusculo*/
+    color: #000000;
+    font-weight: bold; /*Texto em negrito*/
+    font-size: 22px; /*Tamanho do texto*/
+    text-decoration: none; /*Tirar o sublinhado do texto*/
+}
