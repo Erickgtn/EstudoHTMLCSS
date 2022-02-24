@@ -1,10 +1,18 @@
 body{
-    background: #CCCCCC;
+    background: #CCCCCC;/* colcando estilo de cor no body do html*/
 }
-
-p{
+#banner{
+    width: 100%;
+}
+h1{
     text-align: center;
 }
-em strong{
-    color: red;
+p{
+    text-align: center; /*essa propriedade será aplicada em todos os parágrafos*/
+}
+#missao{
+    font-size:20px
+}
+em strong{ /*Essa propriedade será aplicada apenas das tags <em><strong>*/
+    color: #FF0000;
 }
