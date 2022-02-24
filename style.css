@@ -1,8 +1,11 @@
 body{
-    background: #CCCCCC;/* colcando estilo de cor no body do html*/
+    
 }
 #banner{
     width: 100%;
+}
+.principal{
+    background: #CCCCCC;/* colcando estilo de cor no body do html*/
 }
 h1{
     text-align: center;
@@ -15,4 +18,17 @@ p{
 }
 em strong{ /*Essa propriedade será aplicada apenas das tags <em><strong>*/
     color: #FF0000;
+}
+.itens {
+    font-style: italic;
+}
+.beneficios{
+    background: #FFFFFF;
+}
+h2{
+    text-align: center;
+}
+#beneficios{
+    a
+    width: 50%;
 }
