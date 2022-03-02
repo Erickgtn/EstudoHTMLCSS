@@ -83,7 +83,7 @@ main{
 form{
     margin: 40px 0;
 }
-form label,form p{
+form label,form legend{
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -96,4 +96,20 @@ form label,form p{
 }
 .checkbox{
     margin: 20px 0;
+}
+.enviar{ /*Efeitos na classe do botão enviar*/
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold ;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /*Aumenta o caminho em escalas proporcionais*/
 }
