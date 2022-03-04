@@ -78,10 +78,6 @@ footer{ /*Propriedades do rodapé*/
     font-size: 13px;
     margin: 20px 0 0;
 }
-
-main{
-   
-}
 form{
     margin: 40px 0;
 }
@@ -140,6 +136,10 @@ td, th{
     font-size: 2em;
     margin: 0 0 1em;
     clear: left;
+    text-shadow: 2px 2px blue; /*Sombra no texto*/
+}
+.titulo-principal::first-letter{
+    font-weight: bold;
 }
 .principal{
     padding: 3em 0;
@@ -172,8 +172,17 @@ td, th{
 .itens:first-child{ /*Primeiro elemento da lista( posso mudar a caracteristica)*/
     font-weight: bold;
 }
+.itens:before{
+    content: "🟊";
+}
 .imagem-beneficios{
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px #000000; /*Sombra na Imagem*/
+}
+.imagem-beneficios:hover{ /*Efeito de opacidade*/
+    opacity: 0.3;
 }
 .utensilios{
     width: 120px;
@@ -197,8 +206,21 @@ td, th{
     background: #888888;
 }
 
-
 .video{
     width: 560px;
     margin: 2em auto;
+}
+@media screen and (max-width: 480px) { /*Adaptação para visualização em celular*/
+    .caixa,.principal,.conteudo-beneficio,.mapa-conteudo,.video{
+        width: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .lista-beneficio, .imagem-beneficios{
+        width: 100%;
+    }
 }
