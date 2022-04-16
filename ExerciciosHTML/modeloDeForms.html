@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modelo de forms</title>
+</head>
+<body>
+    <h2>Cadastro da liga dos astronautas</h2>
+    <form>
+        <div>
+            <label>Nome:</label>
+            <input type="text">
+            
+        </div>
+        <br>
+        <div>
+            <label>Email:</label>
+            <input type="email" required>
+       
+            <label>Password:</label>
+            <input type="password">
+        </div>
+        <br>
+        <div>
+            <label>Data de nascimento:</label>
+            <input type="date">
+        
+            <label>Foto:</label>
+            <input type="file">
+        </div>
+        <br> 
+        <div>
+            <label>Nacionalidade: </label>
+            <select name="nacionalidade"  id="nacionalidade" >
+                <option>Russian</option>
+                <option>Americam</option>
+                <option>Brasilian</option>
+            </select>
+        
+                <label>Genero: </label>
+                <label>F</label>
+                <input type="radio" id="radio" value="F">
+                <label>M</label>
+                <input type="radio" id="radio" value="M">
+        </div>
+        <br>
+        <div>
+            <label>Suas principais qualidades:</label>
+            <br>
+
+            <input type="checkbox"> Inteligência |
+            <input type="checkbox"> Resiliência |
+            <input type="checkbox"> Preparo físico |
+            <input type="checkbox"> Educação
+            
+        </div>
+        <br>
+        <div>
+            <textarea name="mensagem" rows="10" cols="30">Porque voce gostaria de ser um astronauta?</textarea>
+        </div>
+        <input type="button" value="Criar"
+        
+        
+
+     
+    </form>
+</body>
+</html>
