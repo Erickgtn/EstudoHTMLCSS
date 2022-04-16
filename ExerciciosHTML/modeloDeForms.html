@@ -7,46 +7,44 @@
     <h2>Cadastro da liga dos astronautas</h2>
     <form>
         <div>
-            <label>Nome:</label>
-            <input type="text">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
             
         </div>
         <br>
         <div>
-            <label>Email:</label>
-            <input type="email" required>
-       
-            <label>Password:</label>
-            <input type="password">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password" >Password:</label>
+            <input type="password" name="password" id="password" >
         </div>
         <br>
         <div>
             <label>Data de nascimento:</label>
-            <input type="date">
+            <input type="date" name="date" id="date">
         
             <label>Foto:</label>
-            <input type="file">
+            <input type="file" name="photo" id="photo">
         </div>
         <br> 
         <div>
             <label>Nacionalidade: </label>
             <select name="nacionalidade"  id="nacionalidade" >
-                <option>Russian</option>
-                <option>Americam</option>
-                <option>Brasilian</option>
+                <option value="russian">Russa</option>
+                <option value="american">Americana</option>
+                <option value="brasilian">Brasileira</option>
             </select>
         
                 <label>Genero: </label>
-                <label>F</label>
-                <input type="radio" id="radio" value="F">
-                <label>M</label>
-                <input type="radio" id="radio" value="M">
+                <label for="famele" >F</label>
+                <input type="radio" name="gender" id="famele" value="F">
+                <label for="male" >M</label>
+                <input type="radio" name="gender" id="male" value="M">
         </div>
         <br>
         <div>
             <label>Suas principais qualidades:</label>
             <br>
-
             <input type="checkbox"> Inteligência |
             <input type="checkbox"> Resiliência |
             <input type="checkbox"> Preparo físico |
@@ -55,7 +53,7 @@
         </div>
         <br>
         <div>
-            <textarea name="mensagem" rows="10" cols="30">Porque voce gostaria de ser um astronauta?</textarea>
+            <textarea name="mensagem" id="mensagem" rows="10" cols="30" placeholder="Porque voce gostaria de ser um astronauta?"></textarea>
         </div>
         <input type="button" value="Criar"
         
