@@ -3,17 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Arrays em Js</title>
+    <link rel="stylesheet" type="text/css" href="conceitosDeJs.css">
 </head>
 <body>
-    
-    <h2><strong>########### Trabalhando com arrays ##############</strong></h2>
-    <br>
-    
-    <h3>Array com 3 elementos</h3>
-    let arrays = ["item 1","item 2", "item 3"]  <!--array com 3 elementos em texto-->
-    
-    <h4>Consultar o primeiro elemento</h4>
-    console.log(Array[0])
+    <div class="array">
+
+        
+        <h2><strong>########### Trabalhando com arrays ##############</strong></h2>
+        <br>
+        
+        <h3>Array com 3 elementos</h3>
+        <p>let arrays = ["item 1","item 2", "item 3"]</p>  <!--array com 3 elementos em texto-->
+        
+        <h3>Consultar o primeiro elemento do array</h3>
+        <p> console.log(array[0])</p>
+
+        <h3>Imprimir todos os elementos do array</h3>
+        <p> console.log(array)</p>
+
+        <h3> Um array aceita tipos variados de dados</h3>
+        <p> ex.:
+        let contatos=["Maria",18,true];</p>
+
+        <h3>Para consultar a idade que está na segunda coluna do vetor</h3>
+        <p> console.log(contatos[1])</p>
+
+        <h3>Criação de um array com 5 posições vazias</h3>
+        <p>let numeros = new array(5)</p>
+        
+        <h2><strong>########### Funções basicas com arrays ##############</strong></h2>
+        <br>
+        <h3>Funcao push ==> Adiciona um novo elemento no final do array</h3>
+        <p>ex.: let arrays = ["item 1","item 2", "item 3"] </p>
+        <p>array.push("item 4")</p>
+        <p>["item 1","item 2", "item 3","item 4"]</p>
+
+        <h3>Funcao pop ==> Remove o ultimo elemento do array</h3>
+        <p>ex.: let arrays = ["item 1","item 2", "item 3"] </p>
+        <p>array.pop()</p>
+        <p> ["item 1","item 2"]</p>
+
+    </div>
+
+
 </body>
 </html>
 
