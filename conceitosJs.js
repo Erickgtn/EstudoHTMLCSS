@@ -14,4 +14,10 @@ let printVelocity = velocity => {
 let newVelocity = doublevelocity(60,printVelocity);
 console.log(newVelocity);
 
-// Trabalhando com arrays
+
+
+
+// ########### Trabalhando com arrays ##############
+
+let arrays = ["item 1","item 2", "item 3"] // array com 3 elementos em texto
+console.log
