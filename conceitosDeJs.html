@@ -115,6 +115,27 @@
 
 
         </p>
+        <h3>Interações em Array Função UpperCase</h3>
+        <p>
+            let nomes = ["Maria","Joao","Carlos","Beto"]
+            let upCaseNomes = nomes.map(function(teste){
+            let upcase = teste.toUpperCase()
+            return upcase
+            })
+            console.log("Nomes depois: "+upCaseNomes)
+        </p>
+
+        <h3>Interações em Array Função Filter</h3>
+        let nomes = ["Maria","Joao","Carlos","Beto","Max"]
+        let qntCaracter = nomes.filter(nome => nome.length <=3)
+        console.log(qntCaracter)
+
+
+        <h3>Interações em Array Função Find</h3>
+        let nomes = ["Maria","Joao","Carlos","Beto","Max"]
+        let qntCaracter = nomes.find(nome => nome.length <=3)
+        console.log(qntCaracter)
+
     </div>
 
 
