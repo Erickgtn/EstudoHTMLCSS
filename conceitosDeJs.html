@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays em Js</title>
+    <link rel="stylesheet" type="text/css" href="conceitosDeJs.css">
+</head>
+<body>
+    <div>
+        <a href="#array">Trabalhando com Arrays</a>
+
+    </div>
+    <div class="array">
+
+        
+        <h2><strong>########### Trabalhando com arrays ##############</strong></h2>
+        <br>
+        
+        <h3>Array com 3 elementos</h3>
+        <p>let arrays = ["item 1","item 2", "item 3"]</p>  <!--array com 3 elementos em texto-->
+        
+        <h3>Consultar o primeiro elemento do array</h3>
+        <p> console.log(array[0])</p>
+
+        <h3>Imprimir todos os elementos do array</h3>
+        <p> console.log(array)</p>
+
+        <h3> Um array aceita tipos variados de dados</h3>
+        <p> ex.:
+        let contatos=["Maria",18,true]</p>
+
+        <h3>Para consultar a idade que está na segunda coluna do vetor</h3>
+        <p> console.log(contatos[1])</p>
+
+        <h3>Criação de um array com 5 posições vazias</h3>
+        <p>let numeros = new array(5)</p>
+        
+        <h2><strong>########### Funções basicas com arrays ##############</strong></h2>
+        <br>
+        <h3>Funcao push ==> Adiciona um novo elemento no final do array</h3>
+        <p>ex.: let arrays = ["item 1","item 2", "item 3"] </p>
+        <p>array.push("item 4")</p>
+        <p>["item 1","item 2","item 3","item 4"]</p>
+
+        <h3>Funcao pop ==> Remove o ultimo elemento do array</h3>
+        <p>ex.: let arrays = ["item 1","item 2","item 3"] </p>
+        <p>array.pop()</p>
+        <p> ["item 1","item 2"]</p>
+
+        <h3>Funcao shift ==> Remove o primeiro elemento do array</h3>
+        <p>ex.: let arrays = ["item 1","item 2","item 3"] </p>
+        <p>array.shift()</p>
+        <p> ["item 2","item 3"]</p>
+
+        <h3>Funcao unshift ==> Adiciona o elemento no início do array</h3>
+        <p>ex.: let arrays = ["item 1","item 2","item 3"] </p>
+        <p>array.unshift("item 0")</p>
+        <p> ["item 0","item 1","item 2","item 3"]</p>
+
+        <h3>Função que retorna o tamanho do array ( quantos elementos tem no array)</h3>  
+        <p> console.log(array.length)</p>
+
+        <h3>Função que retorna o índice do elemento dentro do array</h3>
+        <p>let position = array.indexOf("item 1")</p>
+        <p> console.log(position)</p>
+        <p>Obs.:Caso o elemento não esteja no array, ele retornará -1 como índice</p>
+        
+        <h2><strong>########### Arrays Bidimensionais ##############</strong></h2>
+        <p>São vetores que tem dentro de si outros vetores</p>
+        <p>ex.: let candidatos = [["Maria",18],["Carlos",25],["João",28],["Lívia",27]]</p>
+        <br>
+        <p>Consultar a primeira posição do vetor<br>
+            console.log(candidatos[0])<br>
+            Terá como retorno: ["Maria",18]
+        </p>
+        <p>Consultar o primeira posição do quarto elemento do vetor<br>
+            console.log(candidatos[3][0])<br>
+            Terá como retorno: ["Lívia"]
+        </p>
+
+        <h2><strong>########### Manipulando Arrays com Splice e Slice ##############</strong></h2>
+        <h3>Função Splice</h3>
+        <p>Sintaxe: array.splice(index[,deleteCount[,elemento1[, ...[,elementoN]]])<br>
+            *Espera um primeiro parâmentro que é um índice do Array<br>
+            *O segundo é aquantidade de elementos que queremos romver a partir deste índice<br>
+            *Os próximos são os elementos que queremos adicionar no lugar<br>
+            *Apenas o primeiro parâmetro é "Obrigatório"<br><br>
+            Ex. <br>
+            let nomes = ["Maria","Joao","Carlos","Beto"]<br>
+            let removeNomes = nomes.splice(1,2,"Roberta","Joana","Lívia")<br>
+            console.log(nomes)<br>
+            Terá como retorno:["Maria","Roberta","Joana","Lívia","Beto"]<br>
+            
+        </p>
+        <h3>Função Slice</h3>
+        <p> Fatiar ou dividir<br>
+            Sintaxe: array.slice([begin[,end]])<br>
+            *Possui um primeiro parâmetro que é o índice inical<br>
+            *O segundo parâmetro é o índice final<br>
+            *Retorna todos os elementos entre o lemento de índice "begin" e o anterior ao elemento "end"<br><br>
+
+            Ex.<br>
+            let nomes = ["Maria","Joao","Carlos","Beto"]<br>
+            let extrairNome = nome.slice(1,3)<br>
+            console.log(nomes)<br>
+            Terá como retorno:["Roberta","Joana"]<br>
+        </p> 
+        <h3>Interações em Array</h3>
+        <p>Funções de interação HOF<br>
+            Sintaxe:
+            array.funcaoDeInterar(function(elementoAtual, indice, array){<br>
+                < corpo da funcao ><br>
+            })<br>
+            Ex.<br>
+            let nomes = ["Maria","Joao","Carlos","Beto"]<br>
+            nomes.forEach(function(elemento,index){<br>
+            console.log("Nome: " + elemento +"\nIndice: " + index)<br>
+            })<br>
+
+
+        </p>
+        <h3>Interações em Array Função UpperCase</h3>
+        <p>
+            let nomes = ["Maria","Joao","Carlos","Beto"]
+            let upCaseNomes = nomes.map(function(teste){
+            let upcase = teste.toUpperCase()
+            return upcase
+            })
+            console.log("Nomes depois: "+upCaseNomes)
+        </p>
+
+        <h3>Interações em Array Função Filter</h3>
+        let nomes = ["Maria","Joao","Carlos","Beto","Max"]
+        let qntCaracter = nomes.filter(nome => nome.length <=3)
+        console.log(qntCaracter)
+
+
+        <h3>Interações em Array Função Find</h3>
+        let nomes = ["Maria","Joao","Carlos","Beto","Max"]
+        let qntCaracter = nomes.find(nome => nome.length <=3)
+        console.log(qntCaracter)
+
+    </div>
+
+
+</body>
+</html>
+

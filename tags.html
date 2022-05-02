@@ -4,6 +4,10 @@
     <title>Tags Iniciais HTML</title>
 </head>
 <body>
+    <div>
+        <a href="#trabalhandoComForms">Trabalhando com forms</a><br>
+        <a href="#tiposDeListas">Tipos de listas</a>
+    </div>
     <h1> Título Maior (h1) </h1>
     <h2> Título menor (h2) </h2> 
     <h3> Título Pequeno (h3) </h3>
@@ -19,6 +23,7 @@
 <p><strong>input</strong>...</p>
 <p><strong>label</strong>...</p>
 =============================================== Trabalhando com Forms ==================================================
+<div id="trabalhandoComForms"><h4>Trabalhando com forms</h4></div>
 <h2>Encontre no google</h2> 
 <form action="https://google.com/search">
     <label for="q">O que deseja Pesquisar?</label>
@@ -37,6 +42,7 @@
 
 
 =============================================== Tipos de Listas ==================================================
+<div id="tiposDeListas"><h4>Tipos de Listas</h4></div>
 <hr>
 <strong>Lista Não ordenadas</strong>
 <ul>
@@ -96,7 +102,19 @@
 
 
 
-
+<div class='tabbable'>
+    <ul class='nav nav-tabs'>
+        <li class='active'><a href='#tab1' data-toggle='tab'>Drinks</a></li>
+        <li><a href='#tab2' data-toggle='tab'>Bread</a></li>
+    </ul>
+    
+    <div class='tab-content'>
+        <div class='tab-pane active' id='tab1'><p>some</p>
+        </div>
+    
+        <div class='tab-pane' id='tab2'><p>many</p>
+        </div>
+    </div>
 
 
 
