@@ -1,9 +1,7 @@
 *{
     background-color: #b0b7bd;
 }
-.array h2{
-    color: rgb(128, 9, 0);
-}
+
 .array h3{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -11,4 +9,17 @@
 .array p{
     color: rgb(0, 21, 255);
     margin-top: 5px;
+}
+.ARR h2{
+    color: rgb(0, 128, 11);
+    border: 2px solid black;
+}
+.ARR p{
+    color: rgb(0, 21, 255);
+    margin-top: 5px;
+}
+.array,.funcoes-com-array,.arrays-bidimensionais,.splice-slice h2{
+    
+    color: rgb(128, 9, 0);
+
 }
