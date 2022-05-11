@@ -114,6 +114,8 @@
                 Terá como retorno:["Roberta","Joana"]<br>
             </p> 
     </div> 
+    <div  class="interacao-com-array">
+
         <h3>Interações em Array</h3>
         <p>Funções de interação HOF<br>
             Sintaxe:
@@ -123,33 +125,44 @@
             Ex.<br>
             let nomes = ["Maria","Joao","Carlos","Beto"]<br>
             nomes.forEach(function(elemento,index){<br>
-            console.log("Nome: " + elemento +"\nIndice: " + index)<br>
+                console.log("Nome: " + elemento +"\nIndice: " + index)<br>
             })<br>
-
-
+            
+            
         </p>
+    </div>
+    <div class="funcaoUpperCase">
+
         <h3>Interações em Array Função UpperCase</h3>
         <p>
             let nomes = ["Maria","Joao","Carlos","Beto"]
             let upCaseNomes = nomes.map(function(teste){
-            let upcase = teste.toUpperCase()
-            return upcase
+                let upcase = teste.toUpperCase()
+                return upcase
             })
             console.log("Nomes depois: "+upCaseNomes)
         </p>
+    </div>
+    <div class="funcaoFilter">
 
         <h3>Interações em Array Função Filter</h3>
         let nomes = ["Maria","Joao","Carlos","Beto","Max"]
         let qntCaracter = nomes.filter(nome => nome.length <=3)
         console.log(qntCaracter)
-
-
+        
+        
         <h3>Interações em Array Função Find</h3>
         let nomes = ["Maria","Joao","Carlos","Beto","Max"]
         let qntCaracter = nomes.find(nome => nome.length <=3)
         console.log(qntCaracter)
-
     </div>
+
+    <div class="metodos">
+        <h2><strong>########### Métodos em JS ##############</strong></h2>
+        
+    </div>
+    
+</div>
 
 
 </body>
