@@ -339,8 +339,47 @@
             caminhao.velocidade(190) <br>
         </p>
   </div>
+  <div class="metodos-get-e-set">
+    <p><strong> Métodos Get e Set</strong></p>
+    <p>
+        // Método set ==> Atribuir valor a uma variável ( validar o valor no momento da atribuição)
+        class Esportivo{
+            constructor(name){
+                this.name=name
+                this.velocidadeAtual=0
+            }
+            set velocidade(novaVelocidade){
+                if(novaVelocidade > 180){
+                this.velocidadeAtual = 180
+                } else{
+                this.velocidadeAtual = novaVelocidade
+                }
+            }
+        }
+        
+        let carro = new Esportivo ("MacLaren")
+        carro.velocidade = 200
+        console.log(carro)
+    </p>
+    <p>
+        // Método get ==> 
+        class Esportivo{
+        constructor(name,kmMensal){
+            this.name=name
+            this.kmMensal=kmMensal
+        }
+        get kmSemanal(){
+            return this.kmMensal/4
+        }
+        }
+        
+        let carro = new Esportivo ("MacLaren",500)
+        console.log("Km semanal:", + carro.kmSemanal)
+    </p>
+  </div>
+  <div class="metodos-estaticos">
 
-
+  </div>
 </div>
 
 
