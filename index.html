@@ -208,12 +208,34 @@
   <div class="associando-classes">
     <p><strong> Associando Classes </strong></p>
     <p>
-        
+        //Associando Classes <br>
+        class Livro {<br>
+        constructor(nomeLivro,autor,anoPublicacao){<br>
+            this.nomeLivro=nomeLivro<br>
+            this.autor=autor<br>
+            this.anoPublicacao = anoPublicacao<br>
+        }<br>
+        }<br>
+        class Editora{<br>
+        constructor(nomeEditora,estado,livroNome,livroAutor,livroAnoPublicacao){<br>
+            this.nomeEditora=nomeEditora<br>
+            this.estado = estado<br>
+            this.livros = new Livro (livroNome,livroAutor,livroAnoPublicacao)<br>
+        }<br>
+        }<br>
+
+        let livro = new Editora("figurati","Rio de Janeiro","A unica coisa","Gary Keller",2016)<br>
+        console.log(livro)<br>
+
     </p>
   </div>  
-<div class="metodo-get-e-set">
-      
-</div>
+  
+  <div class="sobreEscrita" id="SOBREESCRITA">
+
+  </div>
+    <div class="metodo-get-e-set">
+        
+    </div>
 
 
 </div>
