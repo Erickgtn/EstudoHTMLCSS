@@ -273,6 +273,7 @@
         console.log(jeep)<br>
   </div>
   <div class="sobreEscrita" id="SOBREESCRITA">
+    <p><strong> Sobreescrita</strong></p>
     <p>
         //Sobreescrita de métodos<br>
         class Carro{<br>
@@ -301,9 +302,43 @@
         console.log(carroDeTransporte)<br>
     </p>
   </div>
-    <div class="metodo-get-e-set">
-        
-    </div>
+  <div class="metodoSuper">
+        <p><strong> Método Super ==> incrementar uma implementação em uma super classe</strong></p>
+
+        <p>
+            Método Super <br>
+            class Carro{ <br>
+                constructor(nome,velociMax,velociAtual){ <br>
+                    this.nome=nome <br>
+                    this.velociMax=velociMax <br>
+                    this.velociAtual=0 <br>
+                } <br>
+                velocidade(aceleracao){ <br>
+                    this.velociAtual+=aceleracao <br>
+                    if(this.velociAtual>this.velociMax){ <br>
+                    alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua ou poderar causar acidentes.") <br>
+                    } <br>
+                } <br>
+            } <br>
+             <br>
+            class Caminhao extends Carro{ <br>
+                constructor(nome,velociMax,velociAtual,qntToneladasMax){ <br>
+                    super(nome,velociMax,velociAtual) // O super chama o contrutor da super classe( classe mae) <br>
+                    this.qntToneladasMax=qntToneladasMax <br>
+                } <br>
+                velocidade(aceleracao){ <br>
+                    aceleracao/=2 <br>
+                    alert("Incrementando Velocidade em "+ aceleracao+ "Km/h") <br>
+                    super.velocidade(aceleracao) <br>
+                } <br>
+            } <br>
+
+            let caminhao = new Caminhao("Volvo",90,50,20) <br>
+
+            console.log(caminhao) <br>
+            caminhao.velocidade(190) <br>
+        </p>
+  </div>
 
 
 </div>
