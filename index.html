@@ -229,9 +229,51 @@
 
     </p>
   </div>  
-  
-  <div class="sobreEscrita" id="SOBREESCRITA">
+  <div class="heranca" id="HERANCA">
+    <p><strong> Herança</strong></p>
+        //Herança
+        class Carro{<br>
+        constructor(nome,velociMax,velociAtual){<br>
+            this.nome=nome<br>
+            this.velociMax=velociMax<br>
+            this.velociAtual=0<br>
+        }
+        velocidade(aceleracao){<br>
+            this.velociAtual+=aceleracao<br>
+            if(this.velociAtual>this.velociMax){<br>
+            alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua ou poderar causar acidentes.")<br>
+            }<br>
+        }<br>
+        }<br>
 
+        class CarroEsportivo extends Carro{<br>
+        stop(){<br>
+            this.velociAtual = 0<br>
+            alert("Desligando Carro e esfriando motor")<br>
+        }<br>
+        }<br>
+
+        class CarroEletrico extends Carro{<br>
+        stop(){<br>
+            this.velociAtual = 0<br>
+            alert("Desligando carro e recarregando bateria")<br>
+        }<br>
+        }<br>
+        
+        let lamboghini = new CarroEsportivo ("Veneno",350,280)<br>
+        let jeep = new CarroEletrico("Compass",250,180)<br>
+
+        lamboghini.velocidade(351)<br>
+        jeep.velocidade(170)<br>
+
+        lamboghini.stop()<br>
+        jeep.stop()<br>
+
+        console.log(lamboghini)<br>
+        console.log(jeep)<br>
+  </div>
+  <div class="sobreEscrita" id="SOBREESCRITA">
+    
   </div>
     <div class="metodo-get-e-set">
         
