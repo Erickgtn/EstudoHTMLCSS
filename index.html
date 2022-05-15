@@ -273,7 +273,33 @@
         console.log(jeep)<br>
   </div>
   <div class="sobreEscrita" id="SOBREESCRITA">
-    
+    <p>
+        //Sobreescrita de métodos<br>
+        class Carro{<br>
+        constructor(nome,velociMax,velociAtual){<br>
+            this.nome=nome<br>
+            this.velociMax=velociMax<br>
+            this.velociAtual=0<br>
+        }<br>
+        velocidade(aceleracao){<br>
+            this.velociAtual+=aceleracao<br>
+            if(this.velociAtual>this.velociMax){<br>
+            alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua ou poderar causar acidentes.")<br>
+            }<br>
+        }<br>
+        }<br>
+
+        class CarroDeTransporte extends Carro{<br>
+        velocidade(){<br>
+            alert ("Carro de transporte só tem velolcidade máxima de 80Km/h")<br>
+        }<br>
+        }<br>
+        
+        let carroDeTransporte = new CarroDeTransporte ("Volvo",90,50)<br>
+        carroDeTransporte.velocidade()<br>
+
+        console.log(carroDeTransporte)<br>
+    </p>
   </div>
     <div class="metodo-get-e-set">
         
