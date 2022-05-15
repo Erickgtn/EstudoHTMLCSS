@@ -158,12 +158,58 @@
         console.log(qntCaracter)
     </div>
 
-    <div class="metodos">
-        <h2><strong>########### Métodos em JS ##############</strong></h2>
+    <div class="classes-e-poo">
+        <h2><strong>########### Classes e POO ##############</strong></h2>
+        <p><strong> Criação de uma classe vazia</strong></p>
+        <p>
+            class Livros {<br>
+            }<br>
+            Criando um objeto para a classe<br>
+            let meusLivros = new Livros()<br>
+            
+        </p>
+        <p><strong> Construtores e Instâncias</strong></p>
+        <p>
+            Instância ==> criar um objeto para aquela classe<br>
+            class Livros {<br>
+                //Criação do construtor da classe<br>
+                constructor(nome,ano){<br>
+                  this.nome=nome<br>
+                  this.ano=ano<br>
+                }<br>
+              }<br>
+              //instânciando o construtor<br>
+              let meusLivros = new Livros("A unica coisa",2016)<br>
+              
+              console.log(meusLivros)<br>  
+        </p>
         
     </div>
+    <div class="metodos" id="METODOS">
+        <p><strong> Métodos </strong></p>
+        <p>
+            class Carro{<br> 
+                constructor(nome){<br> 
+                  this.nome=nome<br> 
+                  this.velocity=0<br> 
+                }<br> 
+                //criando um método<br> 
+                speed(aceleration){<br> 
+                  this.velocity+=aceleration<br> 
+                }<br> 
+              }<br> 
+              //instânciar a classe carro<br> 
+              let lamborghini = new Carro("Lamborghini")<br> 
+              lamborghini.speed(100)<br> 
+              lamborghini.speed(150)<br> 
+              console.log(lamborghini)<br> 
+        </p>
+    </div>
   <div class="associando-classes">
-
+    <p><strong> Associando Classes </strong></p>
+    <p>
+        
+    </p>
   </div>  
 <div class="metodo-get-e-set">
       
