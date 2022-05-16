@@ -342,43 +342,58 @@
   <div class="metodos-get-e-set">
     <p><strong> Métodos Get e Set</strong></p>
     <p>
-        // Método set ==> Atribuir valor a uma variável ( validar o valor no momento da atribuição)
-        class Esportivo{
-            constructor(name){
-                this.name=name
-                this.velocidadeAtual=0
-            }
-            set velocidade(novaVelocidade){
-                if(novaVelocidade > 180){
-                this.velocidadeAtual = 180
-                } else{
-                this.velocidadeAtual = novaVelocidade
-                }
-            }
-        }
+        // Método set ==> Atribuir valor a uma variável ( validar o valor no momento da atribuição)<br>
+        class Esportivo{<br>
+            constructor(name){<br>
+                this.name=name<br>
+                this.velocidadeAtual=0<br>
+            }<br>
+            set velocidade(novaVelocidade){<br>
+                if(novaVelocidade > 180){<br>
+                this.velocidadeAtual = 180<br>
+                } else{<br>
+                this.velocidadeAtual = novaVelocidade<br>
+                }<br>
+            }<br>
+        }<br>
         
-        let carro = new Esportivo ("MacLaren")
-        carro.velocidade = 200
-        console.log(carro)
+        let carro = new Esportivo ("MacLaren")<br>
+        carro.velocidade = 200<br>
+        console.log(carro)<br><br>
     </p>
     <p>
-        // Método get ==> 
-        class Esportivo{
-        constructor(name,kmMensal){
-            this.name=name
-            this.kmMensal=kmMensal
-        }
-        get kmSemanal(){
-            return this.kmMensal/4
-        }
-        }
+        // Método get ==> <br>
+        class Esportivo{<br>
+        constructor(name,kmMensal){<br>
+            this.name=name<br>
+            this.kmMensal=kmMensal<br>
+        }<br>
+        get kmSemanal(){<br>
+            return this.kmMensal/4<br>
+        }<br>
+        }<br>
         
-        let carro = new Esportivo ("MacLaren",500)
-        console.log("Km semanal:", + carro.kmSemanal)
+        let carro = new Esportivo ("MacLaren",500)<br>
+        console.log("Km semanal:", + carro.kmSemanal)<br>
     </p>
   </div>
   <div class="metodos-estaticos">
+    <p>
+        <p><strong> Métodos Estáticos</strong></p> <br>
+        class IMC{<br>
+        constructor(nome,peso,altura){<br>
+            this.name=name<br>
+            this.peso=peso<br>
+            this.altura=altura<br>
+        }<br>
+        static calculoIMC (peso,altura){<br>
+            return peso/(altura*altura)<br>
+        }<br>
+        }<br>
 
+        let imc = IMC.calculoIMC (70,1.73)<br>
+        console.log(imc) <br>
+    </p>
   </div>
 </div>
 
