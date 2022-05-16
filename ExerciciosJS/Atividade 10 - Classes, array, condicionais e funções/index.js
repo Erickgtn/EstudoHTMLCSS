@@ -1,19 +1,22 @@
 class Nave{
-    constructor(nome,qntTripulantes){
+    constructor(nome,qntTripulantes,engate=false,portas=false){
         this.nome = nome
         this.qntTripulantes = qntTripulantes
-        this.engate = false
-        this.portas = false
+        this.engate = engate
+        this.portas = portas
     }
 }
-let arrayNaves = [];
 function cadastroNave(){
     let nave = new Nave(
         prompt("Nome da nave"),
-        Number(prompt("Quantidade de tripulantes"))
-    );
+        Number(prompt("Quantidade de tripulantes")),
+        true,
+        true
+     );
     return nave;
 }
+let arrayNaves = [];
+
 
 let opc
 do {
@@ -25,6 +28,7 @@ do {
         break
 
         case "2":
+            alert(arrayNaves)
             console.log(arrayNaves)
         break
 

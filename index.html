@@ -158,18 +158,243 @@
         console.log(qntCaracter)
     </div>
 
-    <div class="metodos">
-        <h2><strong>########### Métodos em JS ##############</strong></h2>
+    <div class="classes-e-poo">
+        <h2><strong>########### Classes e POO ##############</strong></h2>
+        <p><strong> Criação de uma classe vazia</strong></p>
+        <p>
+            class Livros {<br>
+            }<br>
+            Criando um objeto para a classe<br>
+            let meusLivros = new Livros()<br>
+            
+        </p>
+        <p><strong> Construtores e Instâncias</strong></p>
+        <p>
+            Instância ==> criar um objeto para aquela classe<br>
+            class Livros {<br>
+                //Criação do construtor da classe<br>
+                constructor(nome,ano){<br>
+                  this.nome=nome<br>
+                  this.ano=ano<br>
+                }<br>
+              }<br>
+              //instânciando o construtor<br>
+              let meusLivros = new Livros("A unica coisa",2016)<br>
+              
+              console.log(meusLivros)<br>  
+        </p>
         
     </div>
+    <div class="metodos" id="METODOS">
+        <p><strong> Métodos </strong></p>
+        <p>
+            class Carro{<br> 
+                constructor(nome){<br> 
+                  this.nome=nome<br> 
+                  this.velocity=0<br> 
+                }<br> 
+                //criando um método<br> 
+                speed(aceleration){<br> 
+                  this.velocity+=aceleration<br> 
+                }<br> 
+              }<br> 
+              //instânciar a classe carro<br> 
+              let lamborghini = new Carro("Lamborghini")<br> 
+              lamborghini.speed(100)<br> 
+              lamborghini.speed(150)<br> 
+              console.log(lamborghini)<br> 
+        </p>
+    </div>
   <div class="associando-classes">
+    <p><strong> Associando Classes </strong></p>
+    <p>
+        //Associando Classes <br>
+        class Livro {<br>
+        constructor(nomeLivro,autor,anoPublicacao){<br>
+            this.nomeLivro=nomeLivro<br>
+            this.autor=autor<br>
+            this.anoPublicacao = anoPublicacao<br>
+        }<br>
+        }<br>
+        class Editora{<br>
+        constructor(nomeEditora,estado,livroNome,livroAutor,livroAnoPublicacao){<br>
+            this.nomeEditora=nomeEditora<br>
+            this.estado = estado<br>
+            this.livros = new Livro (livroNome,livroAutor,livroAnoPublicacao)<br>
+        }<br>
+        }<br>
 
+        let livro = new Editora("figurati","Rio de Janeiro","A unica coisa","Gary Keller",2016)<br>
+        console.log(livro)<br>
+
+    </p>
   </div>  
-<div class="metodo-get-e-set">
-      
-</div>
+  <div class="heranca" id="HERANCA">
+    <p><strong> Herança</strong></p>
+        //Herança
+        class Carro{<br>
+        constructor(nome,velociMax,velociAtual){<br>
+            this.nome=nome<br>
+            this.velociMax=velociMax<br>
+            this.velociAtual=0<br>
+        }
+        velocidade(aceleracao){<br>
+            this.velociAtual+=aceleracao<br>
+            if(this.velociAtual>this.velociMax){<br>
+            alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua ou poderar causar acidentes.")<br>
+            }<br>
+        }<br>
+        }<br>
 
+        class CarroEsportivo extends Carro{<br>
+        stop(){<br>
+            this.velociAtual = 0<br>
+            alert("Desligando Carro e esfriando motor")<br>
+        }<br>
+        }<br>
 
+        class CarroEletrico extends Carro{<br>
+        stop(){<br>
+            this.velociAtual = 0<br>
+            alert("Desligando carro e recarregando bateria")<br>
+        }<br>
+        }<br>
+        
+        let lamboghini = new CarroEsportivo ("Veneno",350,280)<br>
+        let jeep = new CarroEletrico("Compass",250,180)<br>
+
+        lamboghini.velocidade(351)<br>
+        jeep.velocidade(170)<br>
+
+        lamboghini.stop()<br>
+        jeep.stop()<br>
+
+        console.log(lamboghini)<br>
+        console.log(jeep)<br>
+  </div>
+  <div class="sobreEscrita" id="SOBREESCRITA">
+    <p><strong> Sobreescrita</strong></p>
+    <p>
+        //Sobreescrita de métodos<br>
+        class Carro{<br>
+        constructor(nome,velociMax,velociAtual){<br>
+            this.nome=nome<br>
+            this.velociMax=velociMax<br>
+            this.velociAtual=0<br>
+        }<br>
+        velocidade(aceleracao){<br>
+            this.velociAtual+=aceleracao<br>
+            if(this.velociAtual>this.velociMax){<br>
+            alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua ou poderar causar acidentes.")<br>
+            }<br>
+        }<br>
+        }<br>
+
+        class CarroDeTransporte extends Carro{<br>
+        velocidade(){<br>
+            alert ("Carro de transporte só tem velolcidade máxima de 80Km/h")<br>
+        }<br>
+        }<br>
+        
+        let carroDeTransporte = new CarroDeTransporte ("Volvo",90,50)<br>
+        carroDeTransporte.velocidade()<br>
+
+        console.log(carroDeTransporte)<br>
+    </p>
+  </div>
+  <div class="metodoSuper">
+        <p><strong> Método Super ==> incrementar uma implementação em uma super classe</strong></p>
+
+        <p>
+            Método Super <br>
+            class Carro{ <br>
+                constructor(nome,velociMax,velociAtual){ <br>
+                    this.nome=nome <br>
+                    this.velociMax=velociMax <br>
+                    this.velociAtual=0 <br>
+                } <br>
+                velocidade(aceleracao){ <br>
+                    this.velociAtual+=aceleracao <br>
+                    if(this.velociAtual>this.velociMax){ <br>
+                    alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua ou poderar causar acidentes.") <br>
+                    } <br>
+                } <br>
+            } <br>
+             <br>
+            class Caminhao extends Carro{ <br>
+                constructor(nome,velociMax,velociAtual,qntToneladasMax){ <br>
+                    super(nome,velociMax,velociAtual) // O super chama o contrutor da super classe( classe mae) <br>
+                    this.qntToneladasMax=qntToneladasMax <br>
+                } <br>
+                velocidade(aceleracao){ <br>
+                    aceleracao/=2 <br>
+                    alert("Incrementando Velocidade em "+ aceleracao+ "Km/h") <br>
+                    super.velocidade(aceleracao) <br>
+                } <br>
+            } <br>
+
+            let caminhao = new Caminhao("Volvo",90,50,20) <br>
+
+            console.log(caminhao) <br>
+            caminhao.velocidade(190) <br>
+        </p>
+  </div>
+  <div class="metodos-get-e-set">
+    <p><strong> Métodos Get e Set</strong></p>
+    <p>
+        // Método set ==> Atribuir valor a uma variável ( validar o valor no momento da atribuição)<br>
+        class Esportivo{<br>
+            constructor(name){<br>
+                this.name=name<br>
+                this.velocidadeAtual=0<br>
+            }<br>
+            set velocidade(novaVelocidade){<br>
+                if(novaVelocidade > 180){<br>
+                this.velocidadeAtual = 180<br>
+                } else{<br>
+                this.velocidadeAtual = novaVelocidade<br>
+                }<br>
+            }<br>
+        }<br>
+        
+        let carro = new Esportivo ("MacLaren")<br>
+        carro.velocidade = 200<br>
+        console.log(carro)<br><br>
+    </p>
+    <p>
+        // Método get ==> <br>
+        class Esportivo{<br>
+        constructor(name,kmMensal){<br>
+            this.name=name<br>
+            this.kmMensal=kmMensal<br>
+        }<br>
+        get kmSemanal(){<br>
+            return this.kmMensal/4<br>
+        }<br>
+        }<br>
+        
+        let carro = new Esportivo ("MacLaren",500)<br>
+        console.log("Km semanal:", + carro.kmSemanal)<br>
+    </p>
+  </div>
+  <div class="metodos-estaticos">
+    <p>
+        <p><strong> Métodos Estáticos</strong></p> <br>
+        class IMC{<br>
+        constructor(nome,peso,altura){<br>
+            this.name=name<br>
+            this.peso=peso<br>
+            this.altura=altura<br>
+        }<br>
+        static calculoIMC (peso,altura){<br>
+            return peso/(altura*altura)<br>
+        }<br>
+        }<br>
+
+        let imc = IMC.calculoIMC (70,1.73)<br>
+        console.log(imc) <br>
+    </p>
+  </div>
 </div>
 
 
