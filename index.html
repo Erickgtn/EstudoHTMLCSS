@@ -395,6 +395,27 @@
         console.log(imc) <br>
     </p>
   </div>
+  <div class="variaveis-estaticas">
+    <p><strong> Variáveis estáticas</strong></p>
+
+    <p> 
+        class Esportivo { <br>
+            static get desaceleracao(){ // Criando um método get estático que sempre retornará 0.20<br>
+            return 0.20<br>
+            }<br>
+            constructor(nome){<br>
+            this.nome=nome<br>
+            this.velocidadeAtual=0<br>
+            }<br>
+            speed(aceleracao){<br>
+            this.velocidadeAtual+=(aceleracao*(1-Esportivo.desaceleracao))<br>
+            }<br>
+        }<br>
+        let carro = new Esportivo ("Jaguar")<br>
+        carro.speed(100)<br>
+        console.log(carro)<br>
+    </p>
+  </div>
 </div>
 
 
